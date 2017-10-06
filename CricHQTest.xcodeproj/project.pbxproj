@@ -149,8 +149,8 @@
 		7555A5B91F871F0900129875 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				7555A5C31F87206C00129875 /* EnvironmentalVariablesProtocol.swift */,
-				7555A5C11F87201C00129875 /* APIClientProtocol.swift */,
+				7555A5ED1F874FEF00129875 /* Environment */,
+				7555A5EE1F874FFB00129875 /* Networking */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -158,13 +158,8 @@
 		7555A5BC1F871FD300129875 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				7555A5D51F872BFD00129875 /* NetworkError.swift */,
-				7555A5C91F8721E200129875 /* RequestBuilder.swift */,
-				7555A5C71F8720C700129875 /* Environment.swift */,
-				7555A5C51F8720B000129875 /* EnvironmentalVariables.swift */,
-				7555A5BD1F871FEE00129875 /* APIClient.swift */,
-				7555A5BE1F871FEE00129875 /* APIEndpoint.swift */,
-				7555A5E51F87430B00129875 /* XMLParsingError.swift */,
+				7555A5EC1F874FD400129875 /* Networking */,
+				7555A5EB1F874FCA00129875 /* Environment */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -223,6 +218,43 @@
 				7555A5EA1F874F3E00129875 /* example_dictionary.md */,
 			);
 			path = "Example data";
+			sourceTree = "<group>";
+		};
+		7555A5EB1F874FCA00129875 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				7555A5C71F8720C700129875 /* Environment.swift */,
+				7555A5C51F8720B000129875 /* EnvironmentalVariables.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		7555A5EC1F874FD400129875 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7555A5D51F872BFD00129875 /* NetworkError.swift */,
+				7555A5C91F8721E200129875 /* RequestBuilder.swift */,
+				7555A5BD1F871FEE00129875 /* APIClient.swift */,
+				7555A5BE1F871FEE00129875 /* APIEndpoint.swift */,
+				7555A5E51F87430B00129875 /* XMLParsingError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7555A5ED1F874FEF00129875 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				7555A5C31F87206C00129875 /* EnvironmentalVariablesProtocol.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		7555A5EE1F874FFB00129875 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7555A5C11F87201C00129875 /* APIClientProtocol.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		E50CBB89BDCEF68754017530 /* Pods */ = {
