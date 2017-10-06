@@ -8,6 +8,7 @@ target 'CricHQTest' do
     pod 'RxSwift' , '4.0.0-beta.0'
     pod 'KeyedAPIParameters', '0.1'
     pod 'SnapKit', '4.0.0'
+    pod 'XMLDictionary', '1.4.1'
 end
 
 swift_32 = ['SwiftLint', 'Alamofire', 'KeyedAPIParameters']
