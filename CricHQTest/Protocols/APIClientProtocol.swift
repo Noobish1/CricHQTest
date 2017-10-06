@@ -2,37 +2,29 @@ import Foundation
 import Alamofire
 import RxSwift
 import KeyedAPIParameters
+import XMLDictionary
 
-internal protocol APIClientProtocol {}
-
-// MARK: Void
-internal extension APIClientProtocol {
-    // Can return a NetworkError or a NSError
-    internal func rx_request(_ endpoint: APIEndpoint, params: APIParameters? = nil) -> Single<Void> {
-        return rx_request(endpoint, params: params, completionHandler: { _, single in
-            single(.success(()))
-        })
-    }
+internal protocol APIClientProtocol: class {
+    var jsonDecoder: JSONDecoder { get }
 }
 
 // MARK: Codable
 internal extension APIClientProtocol {
     // Can return a NetworkError or a NSError
     internal func rx_request<T: Codable>(_ endpoint: APIEndpoint, params: APIParameters? = nil) -> Single<T> {
-        return rx_request(endpoint, params: params, completionHandler: { data, single in
+        return rx_request(endpoint, params: params, completionHandler: { [weak self] data, single in
+            guard let strongSelf = self else { return }
+            
             do {
-                single(.success(try JSONDecoder().decode(T.self, from: data)))
-            } catch let error {
-                single(.error(error))
-            }
-        })
-    }
-
-    // Can return a NetworkError or a NSError
-    internal func rx_request<T: Codable>(_ endpoint: APIEndpoint, params: APIParameters? = nil) -> Single<[T]> {
-        return rx_request(endpoint, params: params, completionHandler: { data, single in
-            do {
-                single(.success(try JSONDecoder().decode([T].self, from: data)))
+                guard let jsonObject = XMLDictionaryParser.sharedInstance().dictionary(with: data) else {
+                    single(.error(XMLParsingError()))
+                    
+                    return
+                }
+                
+                let jsonData = try JSONSerialization.data(withJSONObject: jsonObject)
+                
+                single(.success(try strongSelf.jsonDecoder.decode(T.self, from: jsonData)))
             } catch let error {
                 single(.error(error))
             }

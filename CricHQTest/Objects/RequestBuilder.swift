@@ -14,10 +14,7 @@ internal final class RequestBuilder {
         return newManager
     }()
 
-    internal static let defaultHeaders = [
-        "Accept" : "application/json",
-        "Accept-Encoding" : "gzip"
-    ]
+    internal static let defaultHeaders: HTTPHeaders = [:]
 
     internal class func buildRequest(for endpoint: APIEndpoint, params: APIParameters? = nil) -> DataRequest {
         var URL = Environment.Variables.BaseURL

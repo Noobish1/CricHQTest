@@ -5,7 +5,7 @@ internal enum APIEndpoint {
 
     internal var url: String {
         switch self {
-            case .topMovies: return "topMovies/json"
+            case .topMovies: return "topMovies/xml"
         }
     }
 

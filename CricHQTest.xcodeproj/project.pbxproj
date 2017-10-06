@@ -23,6 +23,14 @@
 		7555A5D31F872B6000129875 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5D01F872B6000129875 /* DataResponse.swift */; };
 		7555A5D41F872B6000129875 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5D11F872B6000129875 /* HTTPMethod.swift */; };
 		7555A5D61F872BFD00129875 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5D51F872BFD00129875 /* NetworkError.swift */; };
+		7555A5D91F8740E000129875 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5D81F8740E000129875 /* Image.swift */; };
+		7555A5DB1F8740F700129875 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5DA1F8740F700129875 /* Price.swift */; };
+		7555A5DD1F87417B00129875 /* ReleaseDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5DC1F87417B00129875 /* ReleaseDate.swift */; };
+		7555A5DF1F87419400129875 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5DE1F87419400129875 /* Category.swift */; };
+		7555A5E11F8741A700129875 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5E01F8741A700129875 /* Movie.swift */; };
+		7555A5E41F87424C00129875 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5E31F87424C00129875 /* JSONDecoder.swift */; };
+		7555A5E61F87430B00129875 /* XMLParsingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5E51F87430B00129875 /* XMLParsingError.swift */; };
+		7555A5E81F87432400129875 /* TopMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5E71F87432400129875 /* TopMovies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +57,15 @@
 		7555A5D01F872B6000129875 /* DataResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		7555A5D11F872B6000129875 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		7555A5D51F872BFD00129875 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		7555A5D81F8740E000129875 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		7555A5DA1F8740F700129875 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		7555A5DC1F87417B00129875 /* ReleaseDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseDate.swift; sourceTree = "<group>"; };
+		7555A5DE1F87419400129875 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		7555A5E01F8741A700129875 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		7555A5E31F87424C00129875 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		7555A5E51F87430B00129875 /* XMLParsingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParsingError.swift; sourceTree = "<group>"; };
+		7555A5E71F87432400129875 /* TopMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovies.swift; sourceTree = "<group>"; };
+		7555A5EA1F874F3E00129875 /* example_dictionary.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = example_dictionary.md; sourceTree = "<group>"; };
 		A34B73141687C36878487067 /* Pods_CricHQTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CricHQTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148BDDECE1CF6CA3F66C88D /* Pods-CricHQTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CricHQTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CricHQTest/Pods-CricHQTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +108,7 @@
 		7555A59D1F8718A400129875 /* CricHQTest */ = {
 			isa = PBXGroup;
 			children = (
+				7555A5D71F8740CF00129875 /* Models */,
 				7555A5CC1F8723F500129875 /* Extensions */,
 				7555A5BC1F871FD300129875 /* Objects */,
 				7555A5B91F871F0900129875 /* Protocols */,
@@ -104,6 +122,7 @@
 		7555A5B01F87195E00129875 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7555A5E91F874ED300129875 /* Example data */,
 				7555A5A51F8718A400129875 /* Assets.xcassets */,
 				7555A5A71F8718A400129875 /* LaunchScreen.storyboard */,
 				7555A5AA1F8718A400129875 /* Info.plist */,
@@ -145,6 +164,7 @@
 				7555A5C51F8720B000129875 /* EnvironmentalVariables.swift */,
 				7555A5BD1F871FEE00129875 /* APIClient.swift */,
 				7555A5BE1F871FEE00129875 /* APIEndpoint.swift */,
+				7555A5E51F87430B00129875 /* XMLParsingError.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -152,6 +172,7 @@
 		7555A5CC1F8723F500129875 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7555A5E21F87424100129875 /* Foundation */,
 				7555A5CF1F872B6000129875 /* Alamofire */,
 				7555A5CD1F872B6000129875 /* KeyedAPIParameters */,
 			);
@@ -173,6 +194,35 @@
 				7555A5D11F872B6000129875 /* HTTPMethod.swift */,
 			);
 			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		7555A5D71F8740CF00129875 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7555A5D81F8740E000129875 /* Image.swift */,
+				7555A5DA1F8740F700129875 /* Price.swift */,
+				7555A5DC1F87417B00129875 /* ReleaseDate.swift */,
+				7555A5DE1F87419400129875 /* Category.swift */,
+				7555A5E01F8741A700129875 /* Movie.swift */,
+				7555A5E71F87432400129875 /* TopMovies.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7555A5E21F87424100129875 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				7555A5E31F87424C00129875 /* JSONDecoder.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		7555A5E91F874ED300129875 /* Example data */ = {
+			isa = PBXGroup;
+			children = (
+				7555A5EA1F874F3E00129875 /* example_dictionary.md */,
+			);
+			path = "Example data";
 			sourceTree = "<group>";
 		};
 		E50CBB89BDCEF68754017530 /* Pods */ = {
@@ -347,13 +397,21 @@
 			files = (
 				7555A5A11F8718A400129875 /* ViewController.swift in Sources */,
 				7555A5D21F872B6000129875 /* KeyedAPIParameters.swift in Sources */,
+				7555A5E11F8741A700129875 /* Movie.swift in Sources */,
+				7555A5E61F87430B00129875 /* XMLParsingError.swift in Sources */,
 				7555A5C81F8720C700129875 /* Environment.swift in Sources */,
 				7555A5D31F872B6000129875 /* DataResponse.swift in Sources */,
 				7555A59F1F8718A400129875 /* AppDelegate.swift in Sources */,
+				7555A5E41F87424C00129875 /* JSONDecoder.swift in Sources */,
 				7555A5CA1F8721E200129875 /* RequestBuilder.swift in Sources */,
+				7555A5E81F87432400129875 /* TopMovies.swift in Sources */,
 				7555A5C21F87201C00129875 /* APIClientProtocol.swift in Sources */,
+				7555A5D91F8740E000129875 /* Image.swift in Sources */,
+				7555A5DB1F8740F700129875 /* Price.swift in Sources */,
 				7555A5BF1F871FEE00129875 /* APIClient.swift in Sources */,
 				7555A5D41F872B6000129875 /* HTTPMethod.swift in Sources */,
+				7555A5DF1F87419400129875 /* Category.swift in Sources */,
+				7555A5DD1F87417B00129875 /* ReleaseDate.swift in Sources */,
 				7555A5C61F8720B000129875 /* EnvironmentalVariables.swift in Sources */,
 				7555A5D61F872BFD00129875 /* NetworkError.swift in Sources */,
 				7555A5C41F87206C00129875 /* EnvironmentalVariablesProtocol.swift in Sources */,
@@ -490,7 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5FU3YAJNJH;
 				INFOPLIST_FILE = "$(SRCROOT)/CricHQTest/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.noobish1.CricHQTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,7 +565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5FU3YAJNJH;
 				INFOPLIST_FILE = "$(SRCROOT)/CricHQTest/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.noobish1.CricHQTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
