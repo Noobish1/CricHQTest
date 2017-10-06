@@ -1,0 +1,47 @@
+disabled_rules:
+  - identifier_name
+opt_in_rules:
+  - force_unwrapping
+  - attributes
+  - file_header
+  - prohibited_super_call
+  - closure_spacing
+  - explicit_init
+  - first_where
+  - nimble_operator
+  - overridden_super_call
+  - private_outlet
+  - redundant_nil_coalescing
+  - fatal_error_message
+  - explicit_top_level_acl
+  - implicit_return
+  - empty_count
+included:
+  - CricHQTest
+cyclomatic_complexity:
+  ignores_case_statements: true
+trailing_whitespace:
+  ignores_empty_lines: true
+colon:
+  apply_to_dictionaries: false
+line_length: 200
+file_length:
+  - 500 # warning
+  - 750 # error
+function_body_length:
+  - 100 # warning
+  - 200 # error
+type_body_length:
+  - 500 # warning
+  - 600 # error
+type_name:
+  min_length: 2 # only warning
+  max_length: # warning and error
+    warning: 50
+    error: 60
+custom_rules:
+  protocol_acls:
+    name: "Protocol ACLs"
+    regex: '^protocol'
+    message: "protocols should have ACLs"
+    severity: error

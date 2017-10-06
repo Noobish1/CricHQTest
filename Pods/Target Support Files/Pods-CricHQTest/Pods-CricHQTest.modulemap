@@ -1,0 +1,6 @@
+framework module Pods_CricHQTest {
+  umbrella header "Pods-CricHQTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
