@@ -24,12 +24,18 @@ internal final class MovieTableViewCell: UITableViewCell {
         label.textColor = foreground
     }
     
+    private func configureSelectedBackgroundView(with color: UIColor) {
+        self.selectedBackgroundView = UIView().then {
+            $0.backgroundColor = color.darker(by: 15)
+        }
+    }
+    
     private func configureStyle(with colors: CellColors?) {
         if let colors = colors {
             contentView.backgroundColor = colors.background
-            
             innerContentView.backgroundColor = colors.background
             
+            configureSelectedBackgroundView(with: colors.background)
             configure(label: nameLabel, withBackground: colors.background, foreground: colors.primary)
             configure(label: categoryLabel, withBackground: colors.background, foreground: colors.secondary)
             configure(label: releaseDateLabel, withBackground: colors.background, foreground: colors.detail)

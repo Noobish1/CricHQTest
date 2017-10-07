@@ -3,6 +3,7 @@ PODS:
   - Hue (3.0.0)
   - KeyedAPIParameters (0.1)
   - Kingfisher (4.1.0)
+  - KMNavigationBarTransition (1.1.1)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - Hue (= 3.0.0)
   - KeyedAPIParameters (= 0.1)
   - Kingfisher (= 4.1.0)
+  - KMNavigationBarTransition (= 1.1.1)
   - R.swift (= 4.0.0)
   - RxSwift (= 4.0.0-beta.0)
   - SnapKit (= 4.0.0)
@@ -29,6 +31,7 @@ SPEC CHECKSUMS:
   Hue: b8fe1e43eef13631331eebecb2198b68e2622f95
   KeyedAPIParameters: b891755c0e70032bd8d12e34d70281b0dd7fd413
   Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
+  KMNavigationBarTransition: 79715a1aeb07a7b0aae45e7e4b02d29db1ea8107
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   RxSwift: e0899fae37065c16db976cc5e3c957e4e388869c
@@ -37,6 +40,6 @@ SPEC CHECKSUMS:
   Then: 823f9813e1d4d0a814a5ba15e9c9d33ec7aca631
   XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
 
-PODFILE CHECKSUM: 282c96957103f2b69d8fe33e217e7f9b6ddbfa04
+PODFILE CHECKSUM: aaa90bda74250ff07b11d8bfa2215516f3d38fae
 
 COCOAPODS: 1.3.1

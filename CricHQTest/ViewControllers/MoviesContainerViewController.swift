@@ -54,6 +54,7 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
         
         self.title = NSLocalizedString("Top Movies", comment: "")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     internal required init?(coder aDecoder: NSCoder) {

@@ -42,6 +42,10 @@ internal final class MovieDetailViewController: UIViewController {
         posterImageView.image = movie.image
         
         if let colors = movie.colors {
+            self.navigationController?.navigationBar.barTintColor = colors.background
+            self.navigationController?.navigationBar.tintColor = colors.primary
+            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : colors.primary]
+            
             view.backgroundColor = colors.background
             topContentView.backgroundColor = colors.background
             

@@ -12,6 +12,7 @@ target 'CricHQTest' do
     pod 'Kingfisher', '4.1.0'
     pod 'R.swift', '4.0.0'
     pod 'Hue', '3.0.0'
+    pod 'KMNavigationBarTransition', '1.1.1'
 end
 
 swift_32 = ['SwiftLint', 'Alamofire', 'KeyedAPIParameters']

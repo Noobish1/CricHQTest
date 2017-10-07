@@ -22,6 +22,8 @@ internal final class MoviesViewController: UIViewController {
         self.topMovies = TopMoviesViewModel(model: movies)
         
         super.init(nibName: nil, bundle: nil)
+        
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     internal required init?(coder aDecoder: NSCoder) {
@@ -45,6 +47,14 @@ internal final class MoviesViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+    }
+    
+    internal override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.barTintColor = nil
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
     }
 }
 

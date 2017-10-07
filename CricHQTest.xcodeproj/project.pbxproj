@@ -21,6 +21,7 @@
 		754A092A1F88C9C000AE1260 /* TopMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A09291F88C9C000AE1260 /* TopMoviesViewModel.swift */; };
 		754A092D1F88CAAF00AE1260 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A092B1F88CAAF00AE1260 /* MovieDetailViewController.swift */; };
 		754A092E1F88CAAF00AE1260 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754A092C1F88CAAF00AE1260 /* MovieDetailViewController.xib */; };
+		754A09301F88F07500AE1260 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A092F1F88F07500AE1260 /* UIColor.swift */; };
 		7555A59F1F8718A400129875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A59E1F8718A400129875 /* AppDelegate.swift */; };
 		7555A5A11F8718A400129875 /* MoviesContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5A01F8718A400129875 /* MoviesContainerViewController.swift */; };
 		7555A5A61F8718A400129875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7555A5A51F8718A400129875 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		754A09291F88C9C000AE1260 /* TopMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesViewModel.swift; sourceTree = "<group>"; };
 		754A092B1F88CAAF00AE1260 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		754A092C1F88CAAF00AE1260 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		754A092F1F88F07500AE1260 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		7555A59B1F8718A400129875 /* CricHQTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricHQTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555A59E1F8718A400129875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7555A5A01F8718A400129875 /* MoviesContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesContainerViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				753E885A1F88825B001F5B60 /* UITableView.swift */,
+				754A092F1F88F07500AE1260 /* UIColor.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CricHQTest/Pods-CricHQTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/KMNavigationBarTransition/KMNavigationBarTransition.framework",
 				"${BUILT_PRODUCTS_DIR}/KeyedAPIParameters/KeyedAPIParameters.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -492,6 +496,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMNavigationBarTransition.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyedAPIParameters.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -577,6 +582,7 @@
 				75CC802D1F88B5AC0094A8E5 /* TopMoviesWithImages.swift in Sources */,
 				7555A5F31F8764D700129875 /* LoadingViewController.swift in Sources */,
 				754A09231F88B6A000AE1260 /* MoviesDataFetcher.swift in Sources */,
+				754A09301F88F07500AE1260 /* UIColor.swift in Sources */,
 				753E885B1F88825B001F5B60 /* UITableView.swift in Sources */,
 				753E884D1F886C95001F5B60 /* ErrorViewController.swift in Sources */,
 				7555A5DB1F8740F700129875 /* Price.swift in Sources */,
