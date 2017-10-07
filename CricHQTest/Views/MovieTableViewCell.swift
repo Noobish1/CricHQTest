@@ -49,7 +49,7 @@ internal final class MovieTableViewCell: UITableViewCell {
         posterImageView.image = viewModel.image
         nameLabel.text = viewModel.name
         categoryLabel.text = viewModel.category
-        releaseDateLabel.text = viewModel.category
+        releaseDateLabel.text = viewModel.releaseDate
         priceLabel.text = viewModel.price
     }
 }
