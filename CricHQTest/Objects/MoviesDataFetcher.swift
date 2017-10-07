@@ -35,15 +35,17 @@ internal final class MoviesDataFetcher {
     }
     
     private func fetchColors(for movie: Movie, image: UIImage?) -> Maybe<(UUID, CellColors)> {
-        self.delegate?.dataFetcherDidStartProcessingImages(dataFetcher: self)
-        
         guard let image = image else {
             return .empty()
         }
         
         return Maybe<(UUID, CellColors)>.create { single in
             DispatchQueue.global().async {
-                single(.success((movie.id, CellColors(tuple: image.colors()))))
+                let ratio = image.size.width / image.size.height
+                let width: CGFloat = 50
+                let size = CGSize(width: width, height: width / ratio)
+                
+                single(.success((movie.id, CellColors(tuple: image.colors(scaleDownSize: size)))))
             }
             
             return Disposables.create()
@@ -53,6 +55,8 @@ internal final class MoviesDataFetcher {
     // MARK: internal functions
     internal func fetchTopMoviesWithMetadata() -> Single<TopMoviesWithMetadata> {
         return fetchTopMoviesWithImages().flatMap { moviesWithImages in
+            self.delegate?.dataFetcherDidStartProcessingImages(dataFetcher: self)
+            
             let stuff = moviesWithImages.topMovies.movies.map {
                 self.fetchColors(for: $0, image: moviesWithImages.imagesMapping[$0.id]).asObservable()
             }
