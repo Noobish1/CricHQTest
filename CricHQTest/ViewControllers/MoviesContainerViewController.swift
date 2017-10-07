@@ -53,6 +53,7 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
         super.init(nibName: nil, bundle: nil)
         
         self.title = NSLocalizedString("Top Movies", comment: "")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     internal required init?(coder aDecoder: NSCoder) {

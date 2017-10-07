@@ -8,6 +8,7 @@ internal struct Movie: Codable {
         case releaseDate = "im:releaseDate"
         case price = "im:price"
         case images = "im:image"
+        case summary
     }
     
     internal let id = UUID()
@@ -17,4 +18,5 @@ internal struct Movie: Codable {
     internal let releaseDate: ReleaseDate
     internal let price: Price
     internal let images: [Image]
+    internal let summary: String
 }
