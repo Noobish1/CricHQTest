@@ -2,10 +2,10 @@ import UIKit
 
 internal final class MovieDetailViewController: UIViewController {
     // MARK: properties
-    private let movie: Movie
+    private let movie: MovieViewModel
     
     // MARK: init/deinit
-    internal init(movie: Movie) {
+    internal init(movie: MovieViewModel) {
         self.movie = movie
         
         super.init(nibName: nil, bundle: nil)

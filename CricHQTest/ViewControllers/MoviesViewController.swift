@@ -7,9 +7,7 @@ import Rswift
 internal final class MoviesViewController: UIViewController {
     // MARK: properties
     private let reuseIdentifier = "MovieCell"
-    private let topMovies: TopMovies
-    private let imagesMapping: [UUID: UIImage]
-    private let colorsMapping: [UUID: CellColors]
+    private let topMovies: TopMoviesViewModel
     private lazy var tableView = UITableView(frame: UIScreen.main.bounds).then {
         $0.dataSource = self
         $0.delegate = self
@@ -21,9 +19,7 @@ internal final class MoviesViewController: UIViewController {
     
     // MARK: init/deinit
     internal init(movies: TopMoviesWithMetadata) {
-        self.topMovies = movies.topMovies
-        self.imagesMapping = movies.imagesMapping
-        self.colorsMapping = movies.colorsMapping
+        self.topMovies = TopMoviesViewModel(model: movies)
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -62,7 +58,7 @@ extension MoviesViewController: UITableViewDataSource {
         let movie = topMovies.movies[indexPath.row]
         
         let cell = tableView.nb_dequeueReusableCellWithIdentifier(R.reuseIdentifier.movieCell, indexPath: indexPath)
-        cell.configure(with: movie, image: imagesMapping[movie.id], colors: colorsMapping[movie.id])
+        cell.configure(with: movie)
         
         return cell
     }

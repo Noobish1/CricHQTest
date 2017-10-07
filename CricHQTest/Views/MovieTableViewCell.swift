@@ -19,24 +19,31 @@ internal final class MovieTableViewCell: UITableViewCell {
     }
     
     // MARK: configuration
-    internal func configure(with movie: Movie, image: UIImage?, colors: CellColors?) {
+    private func configure(label: UILabel, withBackground background: UIColor, foreground: UIColor) {
+        label.backgroundColor = background
+        label.textColor = foreground
+    }
+    
+    private func configureStyle(with colors: CellColors?) {
         if let colors = colors {
             contentView.backgroundColor = colors.background
+            
             innerContentView.backgroundColor = colors.background
-            nameLabel.backgroundColor = colors.background
-            nameLabel.textColor = colors.primary
-            categoryLabel.backgroundColor = colors.background
-            categoryLabel.textColor = colors.secondary
-            releaseDateLabel.backgroundColor = colors.background
-            releaseDateLabel.textColor = colors.detail
-            priceLabel.backgroundColor = colors.background
-            priceLabel.textColor = colors.detail
+            
+            configure(label: nameLabel, withBackground: colors.background, foreground: colors.primary)
+            configure(label: categoryLabel, withBackground: colors.background, foreground: colors.secondary)
+            configure(label: releaseDateLabel, withBackground: colors.background, foreground: colors.detail)
+            configure(label: priceLabel, withBackground: colors.background, foreground: colors.detail)
         }
+    }
+    
+    internal func configure(with viewModel: MovieViewModel) {
+        configureStyle(with: viewModel.colors)
         
-        posterImageView.image = image
-        nameLabel.text = movie.name
-        categoryLabel.text = movie.category.name
-        releaseDateLabel.text = DateFormatters.releaseDateFormatter.string(from: movie.releaseDate.value)
-        priceLabel.text = "\(movie.price.amount) \(movie.price.currency)"
+        posterImageView.image = viewModel.image
+        nameLabel.text = viewModel.name
+        categoryLabel.text = viewModel.category
+        releaseDateLabel.text = viewModel.category
+        priceLabel.text = viewModel.price
     }
 }
