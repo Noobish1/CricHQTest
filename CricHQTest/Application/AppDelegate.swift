@@ -11,7 +11,7 @@ internal final class AppDelegate: UIResponder {
 extension AppDelegate: UIApplicationDelegate {
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds).then {
-            $0.rootViewController = UINavigationController(rootViewController: MoviesViewController())
+            $0.rootViewController = UINavigationController(rootViewController: MoviesContainerViewController())
             $0.makeKeyAndVisible()
         }
         
