@@ -37,7 +37,10 @@ internal final class MoviesViewController: UIViewController {
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(self.topLayoutGuide.snp.bottom)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
     
