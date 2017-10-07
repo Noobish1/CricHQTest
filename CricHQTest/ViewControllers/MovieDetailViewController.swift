@@ -42,9 +42,7 @@ internal final class MovieDetailViewController: UIViewController {
         posterImageView.image = movie.image
         
         if let colors = movie.colors {
-            self.navigationController?.navigationBar.barTintColor = colors.background
-            self.navigationController?.navigationBar.tintColor = colors.primary
-            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : colors.primary]
+            configureNavBarWith(backgroundColor: colors.background, foregroundColor: colors.primary)
             
             view.backgroundColor = colors.background
             topContentView.backgroundColor = colors.background
@@ -59,6 +57,12 @@ internal final class MovieDetailViewController: UIViewController {
     }
     
     // MARK: configuration
+    private func configureNavBarWith(backgroundColor: UIColor, foregroundColor: UIColor) {
+        self.navigationController?.navigationBar.barTintColor = backgroundColor
+        self.navigationController?.navigationBar.tintColor = foregroundColor
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : foregroundColor]
+    }
+    
     private func configure(label: UILabel, withBackground background: UIColor, foreground: UIColor) {
         label.backgroundColor = background
         label.textColor = foreground
