@@ -43,6 +43,9 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
     private let containerView = UIView()
     private let disposeBag = DisposeBag()
     private let initialFetch = Singular()
+    private lazy var dataFetcher = MoviesDataFetcher().then {
+        $0.delegate = self
+    }
     private var state: State = .loading(LoadingViewController())
     
     // MARK: init/deinit
@@ -85,7 +88,7 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
     private func fetchData(minimumDuration: RxTimeInterval = 0) {
         transition(to: .loading(LoadingViewController()))
         
-        MoviesDataFetcher.fetchTopMoviesWithMetadata()
+        dataFetcher.fetchTopMoviesWithMetadata()
             .minimumDuration(duration: 0.6)
             .subscribe { [weak self] event in
                 guard let strongSelf = self else { return }
@@ -117,5 +120,27 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
         transitionFromViewController(fromVC, toViewController: toVC, containerView: containerView)
         
         self.state = newState
+    }
+    
+    // MARK: update
+    private func updateLoadingTitleIfNeeded(to title: String) {
+        switch state {
+            case .loading(let loadingVC): loadingVC.update(title: title)
+            case .errored, .loaded: break
+        }
+    }
+}
+
+extension MoviesContainerViewController: MoviesDataFetcherDelegate {
+    internal func dataFetcherDidStartFetchingInitialData(dataFetcher: MoviesDataFetcher) {
+        updateLoadingTitleIfNeeded(to: NSLocalizedString("Fetching Initial Data", comment: ""))
+    }
+    
+    internal func dataFetcherDidStartFetchingImages(dataFetcher: MoviesDataFetcher) {
+        updateLoadingTitleIfNeeded(to: NSLocalizedString("Fetching Images", comment: ""))
+    }
+    
+    internal func dataFetcherDidStartProcessingImages(dataFetcher: MoviesDataFetcher) {
+        updateLoadingTitleIfNeeded(to: NSLocalizedString("Processing Images", comment: ""))
     }
 }
