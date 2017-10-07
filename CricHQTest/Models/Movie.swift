@@ -10,6 +10,7 @@ internal struct Movie: Codable {
         case images = "im:image"
     }
     
+    internal let id = UUID()
     internal let name: String
     internal let director: String
     internal let category: Category

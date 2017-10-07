@@ -42,6 +42,7 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
     // MARK: properties
     private let containerView = UIView()
     private let disposeBag = DisposeBag()
+    private let initialFetch = Singular()
     private var state: State = .loading(LoadingViewController())
     
     // MARK: init/deinit
@@ -75,28 +76,33 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
     internal override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        fetchTopMovies()
+        initialFetch.performOnce {
+            fetchData()
+        }
     }
     
     // MARK: fetch
-    private func fetchTopMovies(minimumDuration: RxTimeInterval = 0) {
+    private func fetchData(minimumDuration: RxTimeInterval = 0) {
         transition(to: .loading(LoadingViewController()))
         
-        APIClient.shared.topMovies().minimumDuration(duration: minimumDuration).subscribe { [weak self] event in
-            guard let strongSelf = self else { return }
-            
-            switch event {
-                case .success(let movies):
-                    strongSelf.transition(to: .loaded(MoviesViewController(movies: movies)))
-                case .error:
-                    strongSelf.transition(to: .errored(ErrorViewController(onTap: { [weak self] in
-                        guard let strongSelf = self else { return }
-                        
-                        // Minimum duration of 0.6 so a fast load doesn't flicker the UI
-                        strongSelf.fetchTopMovies(minimumDuration: 0.6)
-                    })))
+        MoviesDataFetcher.fetchTopMoviesWithMetadata()
+            .minimumDuration(duration: 0.6)
+            .subscribe { [weak self] event in
+                guard let strongSelf = self else { return }
+                
+                switch event {
+                    case .success(let movies):
+                        strongSelf.transition(to: .loaded(MoviesViewController(movies: movies)))
+                    case .error:
+                        strongSelf.transition(to: .errored(ErrorViewController(onTap: { [weak self] in
+                            guard let strongSelf = self else { return }
+                            
+                            // Minimum duration of 0.6 so a fast load doesn't flicker the UI
+                            strongSelf.fetchData(minimumDuration: 0.6)
+                        })))
+                }
             }
-        }.disposed(by: disposeBag)
+            .disposed(by: disposeBag)
     }
     
     // MARK: transition

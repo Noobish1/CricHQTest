@@ -9,10 +9,13 @@ target 'CricHQTest' do
     pod 'KeyedAPIParameters', '0.1'
     pod 'SnapKit', '4.0.0'
     pod 'XMLDictionary', '1.4.1'
+    pod 'Kingfisher', '4.1.0'
+    pod 'R.swift', '4.0.0'
+    pod 'Hue', '3.0.0'
 end
 
 swift_32 = ['SwiftLint', 'Alamofire', 'KeyedAPIParameters']
-swift4 = ['KeyboardObserver', 'SnapKit', 'RxSwift', 'Then']
+swift4 = ['KeyboardObserver', 'SnapKit', 'RxSwift', 'Then', 'Kingfisher', 'R.swift', 'Hue']
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|
