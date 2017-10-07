@@ -17,6 +17,7 @@
 		753E88581F8881F7001F5B60 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E88571F8881F7001F5B60 /* R.generated.swift */; };
 		753E885B1F88825B001F5B60 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E885A1F88825B001F5B60 /* UITableView.swift */; };
 		754A09231F88B6A000AE1260 /* MoviesDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A09221F88B6A000AE1260 /* MoviesDataFetcher.swift */; };
+		754A09251F88B85D00AE1260 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A09241F88B85D00AE1260 /* DateFormatters.swift */; };
 		7555A59F1F8718A400129875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A59E1F8718A400129875 /* AppDelegate.swift */; };
 		7555A5A11F8718A400129875 /* MoviesContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5A01F8718A400129875 /* MoviesContainerViewController.swift */; };
 		7555A5A61F8718A400129875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7555A5A51F8718A400129875 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		753E88571F8881F7001F5B60 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		753E885A1F88825B001F5B60 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		754A09221F88B6A000AE1260 /* MoviesDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDataFetcher.swift; sourceTree = "<group>"; };
+		754A09241F88B85D00AE1260 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		7555A59B1F8718A400129875 /* CricHQTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricHQTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555A59E1F8718A400129875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7555A5A01F8718A400129875 /* MoviesContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesContainerViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				75CC802C1F88B5AC0094A8E5 /* TopMoviesWithImages.swift */,
 				75CC802E1F88B5C60094A8E5 /* TopMoviesWithMetadata.swift */,
 				754A09221F88B6A000AE1260 /* MoviesDataFetcher.swift */,
+				754A09241F88B85D00AE1260 /* DateFormatters.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				753E884B1F886C71001F5B60 /* PrimitiveSequence.swift in Sources */,
 				7555A5CA1F8721E200129875 /* RequestBuilder.swift in Sources */,
 				75CC80291F88AE0C0094A8E5 /* Singular.swift in Sources */,
+				754A09251F88B85D00AE1260 /* DateFormatters.swift in Sources */,
 				753E88581F8881F7001F5B60 /* R.generated.swift in Sources */,
 				7555A5E81F87432400129875 /* TopMovies.swift in Sources */,
 				7555A5C21F87201C00129875 /* APIClientProtocol.swift in Sources */,

@@ -2,12 +2,6 @@ import UIKit
 import Then
 import Hue
 
-internal final class DateFormatters {
-    internal static let releaseDateFormatter = DateFormatter().then {
-        $0.dateFormat = "MMM d, yyyy"
-    }
-}
-
 internal final class MovieTableViewCell: UITableViewCell {
     // MARK: outlets
     @IBOutlet private weak var posterImageView: UIImageView!
