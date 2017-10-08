@@ -1,4 +1,5 @@
 import UIKit
+import Then
 
 internal final class ErrorViewController: UIViewController {
     // MARK: properties
