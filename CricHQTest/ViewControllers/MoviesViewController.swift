@@ -15,6 +15,7 @@ internal final class MoviesViewController: UIViewController {
         $0.rowHeight = UITableViewAutomaticDimension
         $0.register(R.nib.movieTableViewCell)
         $0.separatorStyle = .none
+        $0.backgroundColor = UIColor(hex: "2C3840")
     }
     
     // MARK: init/deinit
@@ -44,9 +45,8 @@ internal final class MoviesViewController: UIViewController {
     
     // MARK: configuration
     private func configureNavBar() {
-        self.navigationController?.navigationBar.barTintColor = nil
-        self.navigationController?.navigationBar.tintColor = .black
-        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
     }
     
     // MARK: UIViewController

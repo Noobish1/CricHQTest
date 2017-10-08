@@ -6,9 +6,10 @@ internal final class LoadingViewController: UIViewController {
     // MARK: properties
     private let titleLabel = UILabel().then {
         $0.textAlignment = .center
+        $0.textColor = .white
     }
     private let contentView = UIView()
-    private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
     
     // MARK: init/deinit
     internal init(title: String = NSLocalizedString("Loading", comment: "")) {
@@ -23,7 +24,7 @@ internal final class LoadingViewController: UIViewController {
     
     // MARK: setup
     private func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .charcoal
         
         contentView.addSubview(titleLabel)
         

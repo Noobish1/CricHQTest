@@ -52,6 +52,7 @@
 		75CC802D1F88B5AC0094A8E5 /* TopMoviesWithImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CC802C1F88B5AC0094A8E5 /* TopMoviesWithImages.swift */; };
 		75CC802F1F88B5C60094A8E5 /* TopMoviesWithMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CC802E1F88B5C60094A8E5 /* TopMoviesWithMetadata.swift */; };
 		75D588CA1F89E9DC00CF586F /* MovieDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D588C91F89E9DC00CF586F /* MovieDetailContentView.swift */; };
+		75D588CC1F89EB0D00CF586F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D588CB1F89EB0D00CF586F /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		75CC802C1F88B5AC0094A8E5 /* TopMoviesWithImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesWithImages.swift; sourceTree = "<group>"; };
 		75CC802E1F88B5C60094A8E5 /* TopMoviesWithMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesWithMetadata.swift; sourceTree = "<group>"; };
 		75D588C91F89E9DC00CF586F /* MovieDetailContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailContentView.swift; sourceTree = "<group>"; };
+		75D588CB1F89EB0D00CF586F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		A34B73141687C36878487067 /* Pods_CricHQTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CricHQTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148BDDECE1CF6CA3F66C88D /* Pods-CricHQTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CricHQTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CricHQTest/Pods-CricHQTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 			children = (
 				753E885A1F88825B001F5B60 /* UITableView.swift */,
 				754A092F1F88F07500AE1260 /* UIColor.swift */,
+				75D588CB1F89EB0D00CF586F /* UIImage.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				753E885B1F88825B001F5B60 /* UITableView.swift in Sources */,
 				75D588CA1F89E9DC00CF586F /* MovieDetailContentView.swift in Sources */,
 				753E884D1F886C95001F5B60 /* ErrorViewController.swift in Sources */,
+				75D588CC1F89EB0D00CF586F /* UIImage.swift in Sources */,
 				7555A5DB1F8740F700129875 /* Price.swift in Sources */,
 				7555A5BF1F871FEE00129875 /* APIClient.swift in Sources */,
 				7555A5D41F872B6000129875 /* HTTPMethod.swift in Sources */,

@@ -34,7 +34,7 @@ internal final class MovieDetailViewController: UIViewController {
     }
     
     private func configureNavBarWith(backgroundColor: UIColor, foregroundColor: UIColor) {
-        self.navigationController?.navigationBar.barTintColor = backgroundColor
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(color: backgroundColor), for: .default)
         self.navigationController?.navigationBar.tintColor = foregroundColor
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : foregroundColor]
     }

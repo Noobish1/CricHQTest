@@ -1,7 +1,11 @@
 import UIKit
+import Hue
 
-// Adapted from https://stackoverflow.com/a/38435309
 internal extension UIColor {
+    // MARK: custom colours
+    internal static var charcoal = UIColor(hex: "2C3840")
+    
+    // Adjusting methods adapted from https://stackoverflow.com/a/38435309
     internal func lighter(by percentage: CGFloat) -> UIColor? {
         return self.adjust(by: abs(percentage))
     }
