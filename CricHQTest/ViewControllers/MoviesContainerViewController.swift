@@ -91,7 +91,7 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
         transition(to: .loading(LoadingViewController()))
         
         dataFetcher.fetchTopMoviesWithMetadata()
-            .minimumDuration(duration: 0.6)
+            .minimumDuration(duration: minimumDuration)
             .subscribe { [weak self] event in
                 guard let strongSelf = self else { return }
                 
