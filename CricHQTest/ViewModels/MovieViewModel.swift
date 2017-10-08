@@ -9,6 +9,7 @@ internal struct MovieViewModel {
     internal let summary: String
     internal let image: UIImage?
     internal let colors: CellColors?
+    internal let trailerURL: URL?
     
     internal init(movie: Movie, image: UIImage?, colors: CellColors?) {
         self.name = movie.name
@@ -19,5 +20,6 @@ internal struct MovieViewModel {
         self.summary = movie.summary
         self.colors = colors
         self.image = image
+        self.trailerURL = movie.links.first(where: { $0.type == "video/x-m4v" })?.url
     }
 }

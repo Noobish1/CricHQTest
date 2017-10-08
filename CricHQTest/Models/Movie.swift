@@ -9,6 +9,7 @@ internal struct Movie: Codable {
         case price = "im:price"
         case images = "im:image"
         case summary
+        case links = "link"
     }
     
     internal let id = UUID()
@@ -19,4 +20,5 @@ internal struct Movie: Codable {
     internal let price: Price
     internal let images: [Image]
     internal let summary: String
+    internal let links: [Link]
 }

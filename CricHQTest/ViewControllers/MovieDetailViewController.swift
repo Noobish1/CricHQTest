@@ -1,4 +1,5 @@
 import UIKit
+import AVKit
 
 internal final class MovieDetailViewController: UIViewController {
     // MARK: outlets
@@ -44,5 +45,18 @@ internal final class MovieDetailViewController: UIViewController {
         super.viewDidLoad()
         
         configureViews()
+    }
+    
+    // MARK: interface actions
+    @IBAction private func trailerButtonTapped() {
+        guard let trailerURL = movie.trailerURL else { return }
+        
+        let player = AVPlayer(url: trailerURL)
+        let playerVC = AVPlayerViewController()
+        playerVC.player = player
+        
+        self.present(playerVC, animated: true, completion: {
+            player.play()
+        })
     }
 }

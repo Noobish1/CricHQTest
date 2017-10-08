@@ -10,6 +10,7 @@ internal final class MovieDetailContentView: UIView {
     @IBOutlet private weak var summaryLabel: UILabel!
     @IBOutlet private weak var posterImageView: UIImageView!
     @IBOutlet private weak var topContentView: UIView!
+    @IBOutlet private weak var trailerButton: UIButton!
     
     // MARK: configuration
     internal func configure(with viewModel: MovieViewModel) {
@@ -20,6 +21,7 @@ internal final class MovieDetailContentView: UIView {
         priceLabel.text = viewModel.price
         summaryLabel.text = viewModel.summary
         posterImageView.image = viewModel.image
+        trailerButton.isHidden = viewModel.trailerURL == nil
         
         if let colors = viewModel.colors {
             configureStyle(with: colors)

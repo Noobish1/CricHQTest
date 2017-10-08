@@ -84,26 +84,40 @@
                                         <constraint firstAttribute="height" constant="120" id="Zv2-4P-1cG"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ht6-8U-zhc">
+                                    <rect key="frame" x="289" y="43" width="70" height="120"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <state key="normal" image="ic_play_circle_outline"/>
+                                    <connections>
+                                        <action selector="trailerButtonTapped" destination="-1" eventType="touchUpInside" id="91d-8p-4Zh"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="aUL-R9-1Iv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ipE-CE-fuU" secondAttribute="trailing" constant="8" id="00w-DE-aaP"/>
                                 <constraint firstItem="taX-MJ-w1G" firstAttribute="top" secondItem="fa7-1F-Xum" secondAttribute="bottom" constant="8" id="2v7-nV-CeW"/>
+                                <constraint firstItem="Ht6-8U-zhc" firstAttribute="leading" secondItem="aUL-R9-1Iv" secondAttribute="leading" id="5vi-1P-Sle"/>
+                                <constraint firstItem="Ht6-8U-zhc" firstAttribute="height" secondItem="aUL-R9-1Iv" secondAttribute="height" id="7H3-sC-hgm"/>
+                                <constraint firstItem="Ht6-8U-zhc" firstAttribute="bottom" secondItem="aUL-R9-1Iv" secondAttribute="bottom" id="B8G-Hq-Pyg"/>
                                 <constraint firstItem="kd4-9x-zbW" firstAttribute="leading" secondItem="3P2-rq-msr" secondAttribute="leading" constant="16" id="D42-gq-1yb"/>
                                 <constraint firstItem="kd4-9x-zbW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="taX-MJ-w1G" secondAttribute="bottom" constant="16" id="DdD-iW-ngd"/>
                                 <constraint firstItem="EPZ-JI-cNI" firstAttribute="top" secondItem="3P2-rq-msr" secondAttribute="top" id="Ep7-dz-Lgf"/>
                                 <constraint firstAttribute="trailing" secondItem="kd4-9x-zbW" secondAttribute="trailing" constant="16" id="FGH-hT-IyA"/>
                                 <constraint firstItem="rNh-gM-A83" firstAttribute="top" secondItem="EPZ-JI-cNI" secondAttribute="bottom" constant="8" id="JSl-Yy-ApY"/>
+                                <constraint firstItem="Ht6-8U-zhc" firstAttribute="trailing" secondItem="aUL-R9-1Iv" secondAttribute="trailing" id="LVz-38-GvX"/>
                                 <constraint firstItem="rNh-gM-A83" firstAttribute="leading" secondItem="3P2-rq-msr" secondAttribute="leading" constant="16" id="LYM-Z4-UW1"/>
                                 <constraint firstItem="taX-MJ-w1G" firstAttribute="leading" secondItem="3P2-rq-msr" secondAttribute="leading" constant="16" id="Mtd-4A-Y5U"/>
                                 <constraint firstAttribute="trailing" secondItem="EPZ-JI-cNI" secondAttribute="trailing" id="Qsw-2G-JFN"/>
                                 <constraint firstItem="fa7-1F-Xum" firstAttribute="leading" secondItem="3P2-rq-msr" secondAttribute="leading" constant="16" id="RDP-BK-Yiv"/>
                                 <constraint firstAttribute="bottom" secondItem="kd4-9x-zbW" secondAttribute="bottom" constant="16" id="WyL-dM-vKC"/>
                                 <constraint firstItem="kd4-9x-zbW" firstAttribute="top" secondItem="aUL-R9-1Iv" secondAttribute="bottom" constant="16" id="Xzw-4p-GrT"/>
+                                <constraint firstItem="Ht6-8U-zhc" firstAttribute="top" secondItem="aUL-R9-1Iv" secondAttribute="top" id="ZBR-9l-Bts"/>
                                 <constraint firstAttribute="trailing" secondItem="aUL-R9-1Iv" secondAttribute="trailing" constant="16" id="di3-5g-iSe"/>
                                 <constraint firstItem="aUL-R9-1Iv" firstAttribute="top" secondItem="Qs2-gh-eeh" secondAttribute="bottom" constant="6" id="dxb-VA-UDJ"/>
                                 <constraint firstItem="fa7-1F-Xum" firstAttribute="top" secondItem="rNh-gM-A83" secondAttribute="bottom" constant="8" id="gR7-CI-IBf"/>
                                 <constraint firstItem="EPZ-JI-cNI" firstAttribute="leading" secondItem="3P2-rq-msr" secondAttribute="leading" id="jFA-Zz-oyf"/>
+                                <constraint firstItem="Ht6-8U-zhc" firstAttribute="width" secondItem="aUL-R9-1Iv" secondAttribute="width" id="sop-Rf-pcZ"/>
                             </constraints>
                             <connections>
                                 <outlet property="categoryLabel" destination="rNh-gM-A83" id="JZz-lq-pBR"/>
@@ -114,6 +128,7 @@
                                 <outlet property="summaryLabel" destination="kd4-9x-zbW" id="hIP-fg-wDB"/>
                                 <outlet property="titleLabel" destination="Qs2-gh-eeh" id="B6c-YJ-4JL"/>
                                 <outlet property="topContentView" destination="EPZ-JI-cNI" id="NEF-TM-Key"/>
+                                <outlet property="trailerButton" destination="Ht6-8U-zhc" id="OjX-cm-qCl"/>
                             </connections>
                         </view>
                     </subviews>
@@ -134,7 +149,10 @@
                 <constraint firstItem="3P2-rq-msr" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="rLI-Du-KAr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="35.5" y="54.5"/>
+            <point key="canvasLocation" x="64.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_play_circle_outline" width="48" height="48"/>
+    </resources>
 </document>
