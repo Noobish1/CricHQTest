@@ -12,14 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="CricHQTest" customModuleProvider="target">
             <connections>
-                <outlet property="categoryLabel" destination="rNh-gM-A83" id="qyN-nu-BcZ"/>
-                <outlet property="directorLabel" destination="ipE-CE-fuU" id="XFt-OD-JXy"/>
-                <outlet property="posterImageView" destination="aUL-R9-1Iv" id="142-9F-eZC"/>
-                <outlet property="priceLabel" destination="taX-MJ-w1G" id="cRg-Hs-XAU"/>
-                <outlet property="releaseDateLabel" destination="fa7-1F-Xum" id="2wW-aA-6HN"/>
-                <outlet property="summaryLabel" destination="kd4-9x-zbW" id="NlL-7Q-hOv"/>
-                <outlet property="titleLabel" destination="Qs2-gh-eeh" id="6bg-3F-62y"/>
-                <outlet property="topContentView" destination="EPZ-JI-cNI" id="5Pd-0U-RnF"/>
+                <outlet property="contentView" destination="3P2-rq-msr" id="Cpr-jW-lt4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,7 +24,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdr-AH-EVl">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3P2-rq-msr">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3P2-rq-msr" customClass="MovieDetailContentView" customModule="CricHQTest" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-JI-cNI">
@@ -112,6 +105,16 @@
                                 <constraint firstItem="fa7-1F-Xum" firstAttribute="top" secondItem="rNh-gM-A83" secondAttribute="bottom" constant="8" id="gR7-CI-IBf"/>
                                 <constraint firstItem="EPZ-JI-cNI" firstAttribute="leading" secondItem="3P2-rq-msr" secondAttribute="leading" id="jFA-Zz-oyf"/>
                             </constraints>
+                            <connections>
+                                <outlet property="categoryLabel" destination="rNh-gM-A83" id="JZz-lq-pBR"/>
+                                <outlet property="directorLabel" destination="ipE-CE-fuU" id="crf-IE-qTf"/>
+                                <outlet property="posterImageView" destination="aUL-R9-1Iv" id="vsD-zK-H8P"/>
+                                <outlet property="priceLabel" destination="taX-MJ-w1G" id="Yfh-SO-oin"/>
+                                <outlet property="releaseDateLabel" destination="fa7-1F-Xum" id="Pdr-aK-qpc"/>
+                                <outlet property="summaryLabel" destination="kd4-9x-zbW" id="hIP-fg-wDB"/>
+                                <outlet property="titleLabel" destination="Qs2-gh-eeh" id="B6c-YJ-4JL"/>
+                                <outlet property="topContentView" destination="EPZ-JI-cNI" id="NEF-TM-Key"/>
+                            </connections>
                         </view>
                     </subviews>
                     <constraints>
