@@ -42,6 +42,13 @@ internal final class MoviesViewController: UIViewController {
         }
     }
     
+    // MARK: configuration
+    private func configureNavBar() {
+        self.navigationController?.navigationBar.barTintColor = nil
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
+    }
+    
     // MARK: UIViewController
     internal override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,9 +59,7 @@ internal final class MoviesViewController: UIViewController {
     internal override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.navigationBar.barTintColor = nil
-        self.navigationController?.navigationBar.tintColor = .black
-        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
+        configureNavBar()
     }
 }
 
