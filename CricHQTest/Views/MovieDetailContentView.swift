@@ -25,6 +25,8 @@ internal final class MovieDetailContentView: UIView {
         
         if let colors = viewModel.colors {
             configureStyle(with: colors)
+        } else {
+            trailerButton.tintColor = .black
         }
     }
     

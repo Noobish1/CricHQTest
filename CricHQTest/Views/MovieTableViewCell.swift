@@ -10,6 +10,7 @@ internal final class MovieTableViewCell: UITableViewCell {
     @IBOutlet private weak var releaseDateLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var innerContentView: UIView!
+    @IBOutlet private weak var imageZeroWidthConstraint: NSLayoutConstraint!
     
     // MARK: reuse
     internal override func prepareForReuse() {
@@ -51,5 +52,7 @@ internal final class MovieTableViewCell: UITableViewCell {
         categoryLabel.text = viewModel.category
         releaseDateLabel.text = viewModel.releaseDate
         priceLabel.text = viewModel.price
+        
+        imageZeroWidthConstraint.priority = .low(unlessUseRequired: viewModel.image == nil)
     }
 }

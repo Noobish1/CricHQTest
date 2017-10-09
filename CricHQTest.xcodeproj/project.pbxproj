@@ -22,6 +22,7 @@
 		754A092E1F88CAAF00AE1260 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754A092C1F88CAAF00AE1260 /* MovieDetailViewController.xib */; };
 		754A09301F88F07500AE1260 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A092F1F88F07500AE1260 /* UIColor.swift */; };
 		7551F3811F8B500400316534 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7551F3801F8B500400316534 /* SessionManager.swift */; };
+		7551F3831F8B599E00316534 /* UILayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7551F3821F8B599E00316534 /* UILayoutPriority.swift */; };
 		7555A59F1F8718A400129875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A59E1F8718A400129875 /* AppDelegate.swift */; };
 		7555A5A11F8718A400129875 /* MoviesContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5A01F8718A400129875 /* MoviesContainerViewController.swift */; };
 		7555A5A61F8718A400129875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7555A5A51F8718A400129875 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		754A092C1F88CAAF00AE1260 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
 		754A092F1F88F07500AE1260 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		7551F3801F8B500400316534 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		7551F3821F8B599E00316534 /* UILayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayoutPriority.swift; sourceTree = "<group>"; };
 		7555A59B1F8718A400129875 /* CricHQTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricHQTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555A59E1F8718A400129875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7555A5A01F8718A400129875 /* MoviesContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesContainerViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				754A092F1F88F07500AE1260 /* UIColor.swift */,
 				75D588CB1F89EB0D00CF586F /* UIImage.swift */,
+				7551F3821F8B599E00316534 /* UILayoutPriority.swift */,
 				753E885A1F88825B001F5B60 /* UITableView.swift */,
 			);
 			path = UIKit;
@@ -625,6 +628,7 @@
 				7555A5D41F872B6000129875 /* HTTPMethod.swift in Sources */,
 				7555A5DF1F87419400129875 /* Category.swift in Sources */,
 				7555A5DD1F87417B00129875 /* ReleaseDate.swift in Sources */,
+				7551F3831F8B599E00316534 /* UILayoutPriority.swift in Sources */,
 				7555A5C61F8720B000129875 /* EnvironmentalVariables.swift in Sources */,
 				7555A5D61F872BFD00129875 /* NetworkError.swift in Sources */,
 				7555A5C41F87206C00129875 /* EnvironmentalVariablesProtocol.swift in Sources */,
