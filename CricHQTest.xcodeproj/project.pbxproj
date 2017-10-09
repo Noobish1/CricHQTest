@@ -143,8 +143,8 @@
 		753E88491F886C63001F5B60 /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				753E884A1F886C71001F5B60 /* PrimitiveSequence.swift */,
 				75C4EC971F8B329F00F96D4B /* Observable.swift */,
+				753E884A1F886C71001F5B60 /* PrimitiveSequence.swift */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -152,10 +152,10 @@
 		753E88501F887C9C001F5B60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75C4EC931F8B0E6E00F96D4B /* LoadingContentView.swift */,
+				75D588C91F89E9DC00CF586F /* MovieDetailContentView.swift */,
 				753E88511F887CD6001F5B60 /* MovieTableViewCell.swift */,
 				753E88521F887CD6001F5B60 /* MovieTableViewCell.xib */,
-				75D588C91F89E9DC00CF586F /* MovieDetailContentView.swift */,
-				75C4EC931F8B0E6E00F96D4B /* LoadingContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,9 +171,9 @@
 		753E88591F888208001F5B60 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				753E885A1F88825B001F5B60 /* UITableView.swift */,
 				754A092F1F88F07500AE1260 /* UIColor.swift */,
 				75D588CB1F89EB0D00CF586F /* UIImage.swift */,
+				753E885A1F88825B001F5B60 /* UITableView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -191,13 +191,13 @@
 			children = (
 				7555A5B71F8719F700129875 /* .gitignore */,
 				7555A5B61F8719F700129875 /* .swiftlint.yml */,
+				7555A59D1F8718A400129875 /* CricHQTest */,
+				ECE61F2D3A41A6566D5DCA77 /* Frameworks */,
 				7555A5B31F8719F700129875 /* Gemfile */,
 				7555A5B41F8719F700129875 /* LICENSE */,
-				7555A5B51F8719F700129875 /* README.md */,
-				7555A59D1F8718A400129875 /* CricHQTest */,
-				7555A59C1F8718A400129875 /* Products */,
 				E50CBB89BDCEF68754017530 /* Pods */,
-				ECE61F2D3A41A6566D5DCA77 /* Frameworks */,
+				7555A59C1F8718A400129875 /* Products */,
+				7555A5B51F8719F700129875 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,16 +212,16 @@
 		7555A59D1F8718A400129875 /* CricHQTest */ = {
 			isa = PBXGroup;
 			children = (
-				754A09261F88C6CE00AE1260 /* ViewModels */,
-				753E88561F8881E3001F5B60 /* Generated */,
-				753E88501F887C9C001F5B60 /* Views */,
-				7555A5D71F8740CF00129875 /* Models */,
+				7555A5B11F87196900129875 /* Application */,
 				7555A5CC1F8723F500129875 /* Extensions */,
+				753E88561F8881E3001F5B60 /* Generated */,
+				7555A5D71F8740CF00129875 /* Models */,
 				7555A5BC1F871FD300129875 /* Objects */,
 				7555A5B91F871F0900129875 /* Protocols */,
-				7555A5B11F87196900129875 /* Application */,
-				7555A5B21F87197100129875 /* ViewControllers */,
 				7555A5B01F87195E00129875 /* Supporting Files */,
+				7555A5B21F87197100129875 /* ViewControllers */,
+				754A09261F88C6CE00AE1260 /* ViewModels */,
+				753E88501F887C9C001F5B60 /* Views */,
 			);
 			path = CricHQTest;
 			sourceTree = "<group>";
@@ -229,10 +229,10 @@
 		7555A5B01F87195E00129875 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7555A5E91F874ED300129875 /* Example data */,
 				7555A5A51F8718A400129875 /* Assets.xcassets */,
-				7555A5A71F8718A400129875 /* LaunchScreen.storyboard */,
+				7555A5E91F874ED300129875 /* Example data */,
 				7555A5AA1F8718A400129875 /* Info.plist */,
+				7555A5A71F8718A400129875 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -248,12 +248,12 @@
 		7555A5B21F87197100129875 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7555A5A01F8718A400129875 /* MoviesContainerViewController.swift */,
-				7555A5F21F8764D700129875 /* LoadingViewController.swift */,
-				753E88471F8865D3001F5B60 /* MoviesViewController.swift */,
 				753E884C1F886C95001F5B60 /* ErrorViewController.swift */,
+				7555A5F21F8764D700129875 /* LoadingViewController.swift */,
 				754A092B1F88CAAF00AE1260 /* MovieDetailViewController.swift */,
 				754A092C1F88CAAF00AE1260 /* MovieDetailViewController.xib */,
+				7555A5A01F8718A400129875 /* MoviesContainerViewController.swift */,
+				753E88471F8865D3001F5B60 /* MoviesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,10 +261,10 @@
 		7555A5B91F871F0900129875 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				7555A5EF1F87545300129875 /* ViewControllers */,
+				75F3C0B31F8B4584003CDCBD /* ContainerStateProtocol.swift */,
 				7555A5ED1F874FEF00129875 /* Environment */,
 				7555A5EE1F874FFB00129875 /* Networking */,
-				75F3C0B31F8B4584003CDCBD /* ContainerStateProtocol.swift */,
+				7555A5EF1F87545300129875 /* ViewControllers */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -272,14 +272,14 @@
 		7555A5BC1F871FD300129875 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				75CC80281F88AE0C0094A8E5 /* Singular.swift */,
-				7555A5EC1F874FD400129875 /* Networking */,
+				754A09241F88B85D00AE1260 /* DateFormatters.swift */,
 				7555A5EB1F874FCA00129875 /* Environment */,
+				75F3C0AF1F8B37A2003CDCBD /* ImageProcessor.swift */,
 				75CC802A1F88B58E0094A8E5 /* InterfaceColors.swift */,
 				75CC802C1F88B5AC0094A8E5 /* MovieWithImage.swift */,
 				75CC802E1F88B5C60094A8E5 /* MovieWithMetadata.swift */,
-				754A09241F88B85D00AE1260 /* DateFormatters.swift */,
-				75F3C0AF1F8B37A2003CDCBD /* ImageProcessor.swift */,
+				7555A5EC1F874FD400129875 /* Networking */,
+				75CC80281F88AE0C0094A8E5 /* Singular.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -287,11 +287,11 @@
 		7555A5CC1F8723F500129875 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				753E88591F888208001F5B60 /* UIKit */,
-				753E88491F886C63001F5B60 /* RxSwift */,
-				7555A5E21F87424100129875 /* Foundation */,
 				7555A5CF1F872B6000129875 /* Alamofire */,
+				7555A5E21F87424100129875 /* Foundation */,
 				7555A5CD1F872B6000129875 /* KeyedAPIParameters */,
+				753E88491F886C63001F5B60 /* RxSwift */,
+				753E88591F888208001F5B60 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -316,13 +316,13 @@
 		7555A5D71F8740CF00129875 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7555A5DE1F87419400129875 /* Category.swift */,
 				7555A5D81F8740E000129875 /* Image.swift */,
+				75D588CD1F89FFC900CF586F /* Link.swift */,
+				7555A5E01F8741A700129875 /* Movie.swift */,
 				7555A5DA1F8740F700129875 /* Price.swift */,
 				7555A5DC1F87417B00129875 /* ReleaseDate.swift */,
-				7555A5DE1F87419400129875 /* Category.swift */,
-				7555A5E01F8741A700129875 /* Movie.swift */,
 				7555A5E71F87432400129875 /* TopMovies.swift */,
-				75D588CD1F89FFC900CF586F /* Link.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,8 +330,8 @@
 		7555A5E21F87424100129875 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				7555A5E31F87424C00129875 /* JSONDecoder.swift */,
 				75C4EC951F8B2ABB00F96D4B /* Collection.swift */,
+				7555A5E31F87424C00129875 /* JSONDecoder.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -356,13 +356,13 @@
 		7555A5EC1F874FD400129875 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				7555A5BD1F871FEE00129875 /* APIClient.swift */,
+				7555A5BE1F871FEE00129875 /* APIEndpoint.swift */,
+				75F3C0AD1F8B345D003CDCBD /* ImageFetcher.swift */,
 				754A09221F88B6A000AE1260 /* MoviesDataFetcher.swift */,
 				7555A5D51F872BFD00129875 /* NetworkError.swift */,
 				7555A5C91F8721E200129875 /* RequestBuilder.swift */,
-				7555A5BD1F871FEE00129875 /* APIClient.swift */,
-				7555A5BE1F871FEE00129875 /* APIEndpoint.swift */,
 				7555A5E51F87430B00129875 /* XMLParsingError.swift */,
-				75F3C0AD1F8B345D003CDCBD /* ImageFetcher.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
