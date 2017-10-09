@@ -4,18 +4,13 @@ import Then
 
 internal final class LoadingViewController: UIViewController {
     // MARK: properties
-    private let titleLabel = UILabel().then {
-        $0.textAlignment = .center
-        $0.textColor = .white
-    }
-    private let contentView = UIView()
-    private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+    private let contentView: LoadingContentView
     
     // MARK: init/deinit
     internal init(title: String = NSLocalizedString("Loading", comment: "")) {
-        super.init(nibName: nil, bundle: nil)
+        self.contentView = LoadingContentView(title: title)
         
-        titleLabel.text = title
+        super.init(nibName: nil, bundle: nil)
     }
     
     internal required init?(coder aDecoder: NSCoder) {
@@ -25,22 +20,6 @@ internal final class LoadingViewController: UIViewController {
     // MARK: setup
     private func setupViews() {
         view.backgroundColor = .charcoal
-        
-        contentView.addSubview(titleLabel)
-        
-        titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-        }
-        
-        contentView.addSubview(activityIndicator)
-        
-        activityIndicator.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(8)
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview()
-        }
         
         view.addSubview(contentView)
         
@@ -59,17 +38,17 @@ internal final class LoadingViewController: UIViewController {
     internal override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        activityIndicator.startAnimating()
+        contentView.startAnimating()
     }
     
     internal override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        activityIndicator.stopAnimating()
+        contentView.stopAnimating()
     }
     
     // MARK: update
     internal func update(title: String) {
-        titleLabel.text = title
+        contentView.update(title: title)
     }
 }
