@@ -48,7 +48,6 @@
 		7555A5F31F8764D700129875 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555A5F21F8764D700129875 /* LoadingViewController.swift */; };
 		75C4EC941F8B0E6E00F96D4B /* LoadingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C4EC931F8B0E6E00F96D4B /* LoadingContentView.swift */; };
 		75C4EC961F8B2ABB00F96D4B /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C4EC951F8B2ABB00F96D4B /* Collection.swift */; };
-		75C4EC981F8B329F00F96D4B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C4EC971F8B329F00F96D4B /* Observable.swift */; };
 		75CC80291F88AE0C0094A8E5 /* Singular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CC80281F88AE0C0094A8E5 /* Singular.swift */; };
 		75CC802B1F88B58E0094A8E5 /* InterfaceColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CC802A1F88B58E0094A8E5 /* InterfaceColors.swift */; };
 		75CC802D1F88B5AC0094A8E5 /* MovieWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CC802C1F88B5AC0094A8E5 /* MovieWithImage.swift */; };
@@ -112,7 +111,6 @@
 		7555A5F21F8764D700129875 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		75C4EC931F8B0E6E00F96D4B /* LoadingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingContentView.swift; sourceTree = "<group>"; };
 		75C4EC951F8B2ABB00F96D4B /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
-		75C4EC971F8B329F00F96D4B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		75CC80281F88AE0C0094A8E5 /* Singular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singular.swift; sourceTree = "<group>"; };
 		75CC802A1F88B58E0094A8E5 /* InterfaceColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceColors.swift; sourceTree = "<group>"; };
 		75CC802C1F88B5AC0094A8E5 /* MovieWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWithImage.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 		753E88491F886C63001F5B60 /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				75C4EC971F8B329F00F96D4B /* Observable.swift */,
 				753E884A1F886C71001F5B60 /* PrimitiveSequence.swift */,
 			);
 			path = RxSwift;
@@ -587,7 +584,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C4EC981F8B329F00F96D4B /* Observable.swift in Sources */,
 				75F3C0B41F8B4584003CDCBD /* ContainerStateProtocol.swift in Sources */,
 				7555A5A11F8718A400129875 /* MoviesContainerViewController.swift in Sources */,
 				75F3C0B01F8B37A2003CDCBD /* ImageProcessor.swift in Sources */,
