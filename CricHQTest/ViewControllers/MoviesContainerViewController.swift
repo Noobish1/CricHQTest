@@ -3,14 +3,14 @@ import SnapKit
 import Then
 import RxSwift
 
-internal final class MoviesContainerViewController: UIViewController, ContainerViewControllerProtocol {
+internal final class MoviesContainerViewController: UIViewController, StatefulContainerViewController {
     // MARK: state
-    private enum State: Equatable {
+    internal enum State: ContainerStateProtocol {
         case loading(LoadingViewController)
         case errored(ErrorViewController)
         case loaded(MoviesViewController)
         
-        fileprivate static func == (lhs: State, rhs: State) -> Bool {
+        internal static func == (lhs: State, rhs: State) -> Bool {
             switch lhs {
                 case .loading(let lhsVC):
                     switch rhs {
@@ -30,7 +30,7 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
             }
         }
         
-        fileprivate var viewController: UIViewController {
+        internal var viewController: UIViewController {
             switch self {
                 case .loading(let vc): return vc
                 case .errored(let vc): return vc
@@ -40,13 +40,14 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
     }
     
     // MARK: properties
-    private let containerView = UIView()
     private let disposeBag = DisposeBag()
     private let initialFetch = Singular()
     private lazy var dataFetcher = MoviesDataFetcher().then {
         $0.delegate = self
     }
-    private var state: State = .loading(LoadingViewController())
+    
+    internal let containerView = UIView()
+    internal var state: State = .loading(LoadingViewController())
     
     // MARK: init/deinit
     internal init() {
@@ -61,20 +62,11 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: setup
-    private func setupViews() {
-        view.addSubview(containerView)
-        
-        containerView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
-    
     // MARK: UIViewController
     internal override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
+        setupContainerView()
         setupInitialViewController(state.viewController, containerView: containerView)
     }
     
@@ -108,20 +100,6 @@ internal final class MoviesContainerViewController: UIViewController, ContainerV
                 }
             }
             .disposed(by: disposeBag)
-    }
-    
-    // MARK: transition
-    private func transition(to newState: State) {
-        guard newState != state else {
-            return
-        }
-        
-        let fromVC = self.state.viewController
-        let toVC = newState.viewController
-        
-        transitionFromViewController(fromVC, toViewController: toVC, containerView: containerView)
-        
-        self.state = newState
     }
     
     // MARK: update

@@ -58,6 +58,8 @@
 		75D588CE1F89FFC900CF586F /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D588CD1F89FFC900CF586F /* Link.swift */; };
 		75F3C0AE1F8B345D003CDCBD /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3C0AD1F8B345D003CDCBD /* ImageFetcher.swift */; };
 		75F3C0B01F8B37A2003CDCBD /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3C0AF1F8B37A2003CDCBD /* ImageProcessor.swift */; };
+		75F3C0B21F8B4566003CDCBD /* StatefulContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3C0B11F8B4566003CDCBD /* StatefulContainerViewController.swift */; };
+		75F3C0B41F8B4584003CDCBD /* ContainerStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3C0B31F8B4584003CDCBD /* ContainerStateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +122,8 @@
 		75D588CD1F89FFC900CF586F /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		75F3C0AD1F8B345D003CDCBD /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		75F3C0AF1F8B37A2003CDCBD /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		75F3C0B11F8B4566003CDCBD /* StatefulContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulContainerViewController.swift; sourceTree = "<group>"; };
+		75F3C0B31F8B4584003CDCBD /* ContainerStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerStateProtocol.swift; sourceTree = "<group>"; };
 		A34B73141687C36878487067 /* Pods_CricHQTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CricHQTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148BDDECE1CF6CA3F66C88D /* Pods-CricHQTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CricHQTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CricHQTest/Pods-CricHQTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +264,7 @@
 				7555A5EF1F87545300129875 /* ViewControllers */,
 				7555A5ED1F874FEF00129875 /* Environment */,
 				7555A5EE1F874FFB00129875 /* Networking */,
+				75F3C0B31F8B4584003CDCBD /* ContainerStateProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				7555A5F01F87546C00129875 /* ContainerViewControllerProtocol.swift */,
+				75F3C0B11F8B4566003CDCBD /* StatefulContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -582,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C4EC981F8B329F00F96D4B /* Observable.swift in Sources */,
+				75F3C0B41F8B4584003CDCBD /* ContainerStateProtocol.swift in Sources */,
 				7555A5A11F8718A400129875 /* MoviesContainerViewController.swift in Sources */,
 				75F3C0B01F8B37A2003CDCBD /* ImageProcessor.swift in Sources */,
 				7555A5D21F872B6000129875 /* KeyedAPIParameters.swift in Sources */,
@@ -590,6 +597,7 @@
 				7555A5E61F87430B00129875 /* XMLParsingError.swift in Sources */,
 				7555A5C81F8720C700129875 /* Environment.swift in Sources */,
 				7555A5D31F872B6000129875 /* DataResponse.swift in Sources */,
+				75F3C0B21F8B4566003CDCBD /* StatefulContainerViewController.swift in Sources */,
 				7555A59F1F8718A400129875 /* AppDelegate.swift in Sources */,
 				7555A5E41F87424C00129875 /* JSONDecoder.swift in Sources */,
 				753E884B1F886C71001F5B60 /* PrimitiveSequence.swift in Sources */,
