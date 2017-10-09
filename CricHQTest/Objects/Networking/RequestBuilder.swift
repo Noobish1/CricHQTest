@@ -1,17 +1,18 @@
 import Foundation
 import Alamofire
 import KeyedAPIParameters
+import Then
 
 internal final class RequestBuilder {
     fileprivate static let manager: SessionManager = {
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
-        configuration.requestCachePolicy = .useProtocolCachePolicy
+        let configuration = URLSessionConfiguration.default.then {
+            $0.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
+            $0.requestCachePolicy = .useProtocolCachePolicy
+        }
 
-        let newManager = SessionManager(configuration: configuration)
-        newManager.startRequestsImmediately = false
-
-        return newManager
+        return SessionManager(configuration: configuration).then {
+            $0.startRequestsImmediately = false
+        }
     }()
 
     internal class func buildRequest(for endpoint: APIEndpoint, params: APIParameters? = nil) -> DataRequest {
