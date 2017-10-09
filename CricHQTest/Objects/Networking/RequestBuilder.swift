@@ -14,8 +14,6 @@ internal final class RequestBuilder {
         return newManager
     }()
 
-    internal static let defaultHeaders: HTTPHeaders = [:]
-
     internal class func buildRequest(for endpoint: APIEndpoint, params: APIParameters? = nil) -> DataRequest {
         var URL = Environment.Variables.BaseURL
         URL.appendPathComponent(endpoint.url)
@@ -23,7 +21,6 @@ internal final class RequestBuilder {
         return RequestBuilder.manager.request(URL,
                                               method: HTTPMethod(keyedHTTPMethod: endpoint.method),
                                               parameters: params?.toDictionary(forHTTPMethod: endpoint.method),
-                                              encoding: endpoint.encoding,
-                                              headers: defaultHeaders)
+                                              encoding: endpoint.encoding)
     }
 }
