@@ -7,6 +7,7 @@ internal final class ErrorViewController: UIViewController {
         $0.text = NSLocalizedString("Top Movies failed to load.\nTap to try again", comment: "")
         $0.numberOfLines = 2
         $0.textAlignment = .center
+        $0.textColor = .white
     }
     private let onTap: () -> Void
     private lazy var tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
@@ -24,7 +25,7 @@ internal final class ErrorViewController: UIViewController {
     
     // MARK: setup
     private func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .charcoal
         view.addGestureRecognizer(tapRecognizer)
         view.addSubview(label)
         
