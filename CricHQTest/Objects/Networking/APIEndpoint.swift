@@ -1,4 +1,5 @@
 import Foundation
+import Alamofire
 
 internal enum APIEndpoint {
     case topMovies
@@ -12,6 +13,12 @@ internal enum APIEndpoint {
     internal var method: KeyedHTTPMethod {
         switch self {
             case .topMovies: return .get
+        }
+    }
+    
+    internal var encoding: ParameterEncoding {
+        switch self {
+            case .topMovies: return URLEncoding()
         }
     }
 }

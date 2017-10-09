@@ -23,7 +23,7 @@ internal final class RequestBuilder {
         return RequestBuilder.manager.request(URL,
                                               method: HTTPMethod(keyedHTTPMethod: endpoint.method),
                                               parameters: params?.toDictionary(forHTTPMethod: endpoint.method),
-                                              encoding: endpoint.method == .get ? URLEncoding() : JSONEncoding(),
+                                              encoding: endpoint.encoding,
                                               headers: defaultHeaders)
     }
 }
