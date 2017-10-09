@@ -4,9 +4,6 @@ import Then
 import Alamofire
 
 internal final class APIClient: APIClientProtocol {
-    // MARK: static properties
-    internal static var shared = APIClient()
-    
     // MARK: instance properties
     internal let jsonDecoder = JSONDecoder().then {
         $0.dateDecodingStrategy = .iso8601

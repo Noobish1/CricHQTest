@@ -11,13 +11,15 @@ internal protocol MoviesDataFetcherDelegate: AnyObject {
 
 // MARK: MoviesDataFetcher
 internal final class MoviesDataFetcher {
+    // MARK: properties
+    private let client = APIClient()
     internal weak var delegate: MoviesDataFetcherDelegate?
     
     // MARK: private functions
     private func fetchImages(for topMovies: TopMovies) -> Single<[(UUID, UIImage)]> {
         self.delegate?.dataFetcherDidStartFetchingImages(dataFetcher: self)
         
-        let requests = topMovies.movies.map { APIClient.shared.downloadImage(for: $0).asObservable() }
+        let requests = topMovies.movies.map { client.downloadImage(for: $0).asObservable() }
         
         return Observable.zip(requests).asSingle()
     }
@@ -25,7 +27,7 @@ internal final class MoviesDataFetcher {
     private func fetchTopMoviesWithImages() -> Single<TopMoviesWithImages> {
         self.delegate?.dataFetcherDidStartFetchingInitialData(dataFetcher: self)
         
-        return APIClient.shared.topMovies().flatMap { topMovies in
+        return client.topMovies().flatMap { topMovies in
             self.fetchImages(for: topMovies).map { idImagePairs in
                 Dictionary(uniqueKeysWithValues: idImagePairs)
             }.map { imagesMapping in
