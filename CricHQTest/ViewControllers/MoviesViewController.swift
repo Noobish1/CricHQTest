@@ -7,7 +7,7 @@ import Rswift
 internal final class MoviesViewController: UIViewController {
     // MARK: properties
     private let reuseIdentifier = "MovieCell"
-    private let topMovies: TopMoviesViewModel
+    private let movies: [MovieViewModel]
     private lazy var tableView = UITableView(frame: UIScreen.main.bounds).then {
         $0.dataSource = self
         $0.delegate = self
@@ -15,12 +15,12 @@ internal final class MoviesViewController: UIViewController {
         $0.rowHeight = UITableViewAutomaticDimension
         $0.register(R.nib.movieTableViewCell)
         $0.separatorStyle = .none
-        $0.backgroundColor = UIColor(hex: "2C3840")
+        $0.backgroundColor = .charcoal
     }
     
     // MARK: init/deinit
-    internal init(movies: TopMoviesWithMetadata) {
-        self.topMovies = TopMoviesViewModel(model: movies)
+    internal init(movies: [MovieWithMetadata]) {
+        self.movies = movies.map(MovieViewModel.init)
         
         super.init(nibName: nil, bundle: nil)
         
@@ -66,11 +66,11 @@ internal final class MoviesViewController: UIViewController {
 // MARK: UITableViewDataSource
 extension MoviesViewController: UITableViewDataSource {
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topMovies.movies.count
+        return movies.count
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let movie = topMovies.movies[indexPath.row]
+        let movie = movies[indexPath.row]
         
         let cell = tableView.nb_dequeueReusableCellWithIdentifier(R.reuseIdentifier.movieCell, indexPath: indexPath)
         cell.configure(with: movie)
@@ -88,7 +88,7 @@ extension MoviesViewController: UITableViewDelegate {
             fatalError("\(self) should be embedded in a UINavigationController but isn't")
         }
         
-        let vc = MovieDetailViewController(movie: topMovies.movies[indexPath.row])
+        let vc = MovieDetailViewController(movie: movies[indexPath.row])
         
         navController.pushViewController(vc, animated: true)
     }

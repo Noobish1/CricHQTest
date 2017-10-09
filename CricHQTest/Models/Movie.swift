@@ -12,7 +12,6 @@ internal struct Movie: Codable {
         case links = "link"
     }
     
-    internal let id = UUID()
     internal let name: String
     internal let director: String
     internal let category: Category

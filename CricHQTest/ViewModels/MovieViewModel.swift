@@ -8,18 +8,20 @@ internal struct MovieViewModel {
     internal let director: String
     internal let summary: String
     internal let image: UIImage?
-    internal let colors: CellColors?
+    internal let colors: InterfaceColors?
     internal let trailerURL: URL?
     
-    internal init(movie: Movie, image: UIImage?, colors: CellColors?) {
+    internal init(movieWithMetaData: MovieWithMetadata) {
+        let movie = movieWithMetaData.movie
+        
         self.name = movie.name
         self.category = movie.category.name
         self.releaseDate = DateFormatters.releaseDateFormatter.string(from: movie.releaseDate.value)
         self.price = movie.price.amount
         self.director = movie.director
         self.summary = movie.summary
-        self.colors = colors
-        self.image = image
+        self.colors = movieWithMetaData.colors
+        self.image = movieWithMetaData.image
         self.trailerURL = movie.links.first(where: { $0.type == "video/x-m4v" })?.url
     }
 }

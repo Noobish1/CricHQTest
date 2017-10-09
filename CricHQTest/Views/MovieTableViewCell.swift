@@ -30,7 +30,7 @@ internal final class MovieTableViewCell: UITableViewCell {
         }
     }
     
-    private func configureStyle(with colors: CellColors?) {
+    private func configureStyle(with colors: InterfaceColors?) {
         if let colors = colors {
             contentView.backgroundColor = colors.background
             innerContentView.backgroundColor = colors.background

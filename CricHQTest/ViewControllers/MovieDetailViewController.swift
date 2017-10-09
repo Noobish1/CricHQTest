@@ -1,5 +1,6 @@
 import UIKit
 import AVKit
+import Then
 
 internal final class MovieDetailViewController: UIViewController {
     // MARK: outlets
@@ -52,8 +53,9 @@ internal final class MovieDetailViewController: UIViewController {
         guard let trailerURL = movie.trailerURL else { return }
         
         let player = AVPlayer(url: trailerURL)
-        let playerVC = AVPlayerViewController()
-        playerVC.player = player
+        let playerVC = AVPlayerViewController().then {
+            $0.player = player
+        }
         
         self.present(playerVC, animated: true, completion: {
             player.play()

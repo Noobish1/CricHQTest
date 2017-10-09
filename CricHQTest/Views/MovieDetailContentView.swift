@@ -28,7 +28,7 @@ internal final class MovieDetailContentView: UIView {
         }
     }
     
-    private func configureStyle(with colors: CellColors) {
+    private func configureStyle(with colors: InterfaceColors) {
         topContentView.backgroundColor = colors.background
         
         configure(label: titleLabel, withBackground: .clear, foreground: colors.primary)

@@ -1,6 +1,6 @@
 import UIKit
 
-internal struct CellColors {
+internal struct InterfaceColors {
     internal let background: UIColor
     internal let primary: UIColor
     internal let secondary: UIColor

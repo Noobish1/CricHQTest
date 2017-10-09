@@ -36,7 +36,7 @@ internal extension APIClientProtocol {
 fileprivate extension APIClientProtocol {
     fileprivate func rx_request<T>(_ endpoint: APIEndpoint, params: APIParameters?,
                                    completionHandler: @escaping (Data, ((SingleEvent<T>) -> Void)) -> Void) -> Single<T> {
-        return Single<T>.create { single -> Disposable in
+        return .create { single -> Disposable in
             let request = RequestBuilder.buildRequest(for: endpoint, params: params)
             let requestReference = request.validate().responseData(completionHandler: { response in
                 switch response.result {
